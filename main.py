@@ -34,9 +34,7 @@ from embedchain import App
 import base64
 import json
 from string import Template
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import pysqlite3
 
 
 my_secret = os.environ['OPENAI_API_KEY']
