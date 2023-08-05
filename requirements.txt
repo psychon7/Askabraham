@@ -1,2 +1,3 @@
 streamlit==1.25.0 
-embedchain==0.0.30  
+embedchain==0.0.30
+pysqlite3-binary
