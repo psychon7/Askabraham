@@ -28,15 +28,16 @@
 # print(answer)
 
 #####
+__import__('pysqlite3')
 import os
 import streamlit as st
 from embedchain import App
 import base64
 import json
 from string import Template
-import pysqlite3
+import sqlite3
 
-
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 my_secret = os.environ['OPENAI_API_KEY']
 ask_abraham_bot = App()
 
